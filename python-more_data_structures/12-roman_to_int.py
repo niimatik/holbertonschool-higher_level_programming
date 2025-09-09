@@ -8,12 +8,11 @@ def roman_to_int(roman_string):
     ]
     last = 0
     num = 0
-    for letter in roman_string:
-        for elem in roman_letter:
-            if letter == elem[0]:
-                if last == 0 or last >= elem[1]:
-                    num += elem[1]
-                elif last < elem[1]:
-                    num += elem[1] - (last * 2)
-                last = elem[1]
+    for letter in reversed(roman_string):
+        value = roman_letter.get(letter, 0)
+        if value < last:
+            num -= value
+        else:
+            num += value
+        last = value
     return (num)
