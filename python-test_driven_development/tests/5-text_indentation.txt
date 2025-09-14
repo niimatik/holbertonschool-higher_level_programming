@@ -1,0 +1,67 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation('Monty Python')
+Monty Python
+
+>>> text_indentation('Ponty Mython?')
+Ponty Mython?
+<BLANKLINE>
+
+>>> text_indentation("Hello world. Monty Python? It's is:")
+Hello world.
+<BLANKLINE>
+Monty Python?
+<BLANKLINE>
+It's is:
+<BLANKLINE>
+
+>>> text_indentation("""Bye world. \
+... Python Monty? \
+... Isn't""")
+Bye world.
+<BLANKLINE>
+Python Monty?
+<BLANKLINE>
+Isn't
+
+>>> text_indentation("   ?:.   ")
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> text_indentation("  .??:?.  ")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> text_indentation(15)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(True)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(str)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(1e400)
+Traceback (most recent call last):
+TypeError: text must be a string
