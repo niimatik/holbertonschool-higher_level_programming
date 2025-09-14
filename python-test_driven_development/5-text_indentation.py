@@ -22,6 +22,13 @@ Example:
 
 """
 def text_indentation(text):
+    """
+    Prints a text with indentation
+    Args:
+        text (str): The text to prints.
+    Raises:
+        TypeError: If `text` isn't string.
+    """
     if type(text) is not str:
         raise TypeError('text must be a string')
     text_length = len(text)
