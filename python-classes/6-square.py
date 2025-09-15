@@ -6,17 +6,7 @@ class Square:
     """Represents a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initializes a square with optional size."""
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        if self.__check_tuple(position) is False \
-            or self.__check_indexes(position) is False \
-            or self.__check_integers(position) is False \
-            or self.__check_value(position) is False:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        
+        """Initializes a square with optional size and position."""
         self.size = size
         self.position = position
 
@@ -36,55 +26,47 @@ class Square:
 
     @property
     def position(self):
-        """get the position of the square"""
+        """Get the position of the square."""
         return self.__position
-    
+
     @position.setter
-    def position(self, position):
-        """Set the position of the square with validation."""
-        if self.__check_tuple(position) is False \
-            or self.__check_indexes(position) is False \
-            or self.__check_integers(position) is False \
-            or self.__check_value(position) is False:
+    def position(self, value):
+        """Set the position with validation."""
+        if (not self.__check_tuple(value) or
+                not self.__check_length(value) or
+                not self.__check_integers(value) or
+                not self.__check_non_negative(value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = position
+        self.__position = value
 
-    def __check_tuple(position):
-        if position is tuple:
-            return True
-        return False
+    def __check_tuple(self, value):
+        """Check if value is a tuple."""
+        return isinstance(value, tuple)
 
-    def __check_indexes(position):
-        if len(position) == 2:
-            return True
-        return False
+    def __check_length(self, value):
+        """Check if tuple has exactly two elements."""
+        return len(value) == 2
 
-    def __check_integers(position):
-        if type(position[0]) is int and type(position[1]) is int:
-            return True
-        return False
-    
-    def __check_value(position):
-        if position[0] >= 0 and position[1] >= 0:
-            return True
-        return False
+    def __check_integers(self, value):
+        """Check if both elements are integers."""
+        return all(isinstance(i, int) for i in value)
+
+    def __check_non_negative(self, value):
+        """Check if both elements are non-negative."""
+        return all(i >= 0 for i in value)
 
     def area(self):
-        """ return the current square area."""
+        """Return the area of the square."""
         return self.__size ** 2
 
     def my_print(self):
-        """prints in stdout the square with the character #."""
+        """Prints the square with '#' characters and position offset."""
         if self.__size == 0:
             print()
-            return None
-        if self.__position[1] > 0:
-            for i in range(self.__position[1]):
-                print('')
-        for j in range(1, self.area() + 1):
-            if j % self.__size == 1:
-                print('{:>{w}}'.format('#', w=self.__position[0] + 1), end='')
-            else:
-                print('#', end='')
-            if j % self.__size == 0 and j > 0:
-                print()
+            return
+
+        for _ in range(self.__position[1]):
+            print()
+
+        for _ in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
