@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-"""rectangle class
-
-This module defines the 'rectangle' class.
-Currently, the class is empty.
-"""
+""" Defines the rectangle class."""
 
 
 class rectangle:
     """Represents a rectangle (currently has no attributes or methods)."""
     pass
-
