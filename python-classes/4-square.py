@@ -19,7 +19,7 @@ class Square:
         return self.__size
 
     @size.setter
-    def __init__(self, size):
+    def size(self, size):
         """Set the size of the square with validation."""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
