@@ -2,7 +2,7 @@
 """
 Module: square
 This module defines the 'square' class.
-Currently, the class is empty and serves as a placeholder for future development.
+Currently, the class is empty.
 """
 
 class square:
