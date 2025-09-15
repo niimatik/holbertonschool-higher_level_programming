@@ -45,6 +45,7 @@ class Rectangle:
     def __check_positive(self, value):
         """Check if value is non-negative."""
         return value >= 0
+
     def area(self):
         """Calculate and return the area of the rectangle."""
         return self.__width * self.__height
