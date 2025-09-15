@@ -61,6 +61,8 @@ class Rectangle:
 
     def __print_rectangle(self):
         """Build a string representation of the rectangle with '#'."""
+        if self.__width == 0 or self.__height == 0:
+            return ""
         w = self.__width
         h = self.__height
         rect_str = ''
