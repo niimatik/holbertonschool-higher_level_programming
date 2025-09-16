@@ -11,7 +11,7 @@ class Rectangle:
         self.height = height
 
     def __del__(self):
-        """Print a message when del."""
+        """Print a message when an instance of rectangle is del."""
         print('Bye rectangle...')
 
     @property
