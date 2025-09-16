@@ -79,6 +79,6 @@ class Rectangle:
 
     def __repr__(self):
         """Return a representation of the rectangle."""
-        w = str('self.width')
-        h = str('self.height')
+        w = str(eval('self.width'))
+        h = str(eval('self.height'))
         return 'rectangle(' + w + ', ' + h + ')'
