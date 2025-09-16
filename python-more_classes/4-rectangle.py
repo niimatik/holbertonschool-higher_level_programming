@@ -81,4 +81,4 @@ class Rectangle:
         """Return a representation of the rectangle."""
         w = str(eval('self.width'))
         h = str(eval('self.height'))
-        return 'rectangle(' + w + ', ' + h + ')'
+        return 'Rectangle(' + w + ', ' + h + ')'
