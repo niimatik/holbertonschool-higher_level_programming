@@ -20,5 +20,5 @@ class Mylist(list):
 
         This method does not modify the original list.
         """
-        if issubclass(MyList, list):
+        if issubclass(Mylist, list):
             print(sorted(self))
