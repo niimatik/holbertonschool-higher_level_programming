@@ -33,4 +33,4 @@ class Rectangle(BaseGeometry):
         """
         Returns a string representation of the rectangle.
         """
-        return '[rectangle] ' + str(self.__width) + '/' + str(self.__height)
+        return '[Rectangle] ' + str(self.__width) + '/' + str(self.__height)
