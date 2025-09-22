@@ -2,8 +2,7 @@
 """
 Module: my_list
 
-This module defines a custom class `MyList` that inherits
-from the built-in `list` class.
+This module defines a class `MyList` that inherits from the `list` class.
 It includes a method to print the list elements in sorted (ascending) order.
 """
 
