@@ -71,7 +71,7 @@ class Rectangle(Shape):
         """
         Compute the perimeter of the rectangle: 2 * (width + height)
         """
-        return 2 * (self.__width + self.__height)
+        return 2 * abs(self.__width + self.__height)
 
 
 def shape_info(shape):
