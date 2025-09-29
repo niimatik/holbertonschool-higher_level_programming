@@ -4,9 +4,6 @@ Module for writing text to a file.
 
 This module provides a function `write_file` that writes a string to a file,
 creating or overwriting the file if it exists.
-
-Functions:
-    write_file(filename="", text=""): Writes text to a file and returns the number of characters written.
 """
 
 
