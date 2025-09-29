@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def read_file(filename=""):
     with open(filename, 'r', encoding="utf-8") as f:
-        contain = f.read()
-    print("{:s}".format(contain))
+        for line in f:
+            print(line, end='')
