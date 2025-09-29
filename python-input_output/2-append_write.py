@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Module for appending text to a file.
-Provides a function `append_write` that adds content to the end of a UTF-8 text file.
 """
 
 
