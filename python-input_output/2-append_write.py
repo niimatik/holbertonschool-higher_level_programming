@@ -6,8 +6,10 @@ Provides a function `append_write` that adds content to the end of a UTF-8 text 
 
 
 def append_write(filename="", text=""):
-    """Append text to the end of a file and return the number
-    of characters written."""
+    """
+    Append text to the end of a file and return the number
+    of characters written.
+    """
 
     with open(filename, 'a', encoding="utf-8") as f:
         return f.write(text)
