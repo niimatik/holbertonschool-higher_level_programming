@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Module defining a Student class with a method to serialize to JSON-compatible dictionary.
+Module defining a Student class with a method to
+serialize to JSON-compatible dictionary.
 """
 
 
@@ -18,7 +19,7 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
-    
+
     def to_json(self):
         """Return a dictionary representation of the Student instance.
 
