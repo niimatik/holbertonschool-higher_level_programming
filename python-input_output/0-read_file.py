@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Module for reading and printing the contents of a text file.
 

@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Module for writing text to a file.
 
