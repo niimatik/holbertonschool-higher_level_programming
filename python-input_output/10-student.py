@@ -45,5 +45,5 @@ class Student:
                 
                 if attr in class_d:
                     sel_d[attr] = class_d[attr]
-                return class_d
-            return sel_d
+            return class_d
+        return sel_d
