@@ -22,19 +22,17 @@ class Student:
 
     def to_json(self, attrs=None):
         """
-    Returns a dictionary representation of the instance.
+        Returns a dictionary representation of the instance.
 
-    If 'attrs' is a list of strings, only attributes with names in this list
-    will be included in the returned dictionary. If 'attrs' contains any non-string
-    elements or is not a list, all attributes will be returned instead.
+        If 'attrs' is a list of strings, only attributes with names in this
+        list will be included in the returned dictionary. If 'attrs' contains
+        non-stringelements or is not a list, all attributes will be returned
+        instead.
 
-    Parameters:
-        attrs (list[str], optional): List of attribute names to include. Defaults to None.
-
-    Returns:
-        dict: A dictionary containing the selected attributes or all attributes if 
-              'attrs' is invalid or not provided.
-    """
+        Parameters:
+            attrs (list[str], optional): List of attribute names to include.
+            Defaults to None.
+        """
         class_d = self.__dict__
         sel_d = dict()
 
@@ -42,7 +40,7 @@ class Student:
             for attr in attrs:
                 if type(attr) is not str:
                     return class_d
-                
+
                 if attr in class_d:
                     sel_d[attr] = class_d[attr]
             return class_d
