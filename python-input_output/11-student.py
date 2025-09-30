@@ -45,7 +45,7 @@ class Student:
                     sel_d[attr] = class_d[attr]
             return sel_d
         return class_d
-    
+
     def reload_from_json(self, json):
         """Replace all the attributes of the student instance."""
         for i in json:
