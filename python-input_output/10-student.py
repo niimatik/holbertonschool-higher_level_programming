@@ -38,11 +38,12 @@ class Student:
         class_d = self.__dict__
         sel_d = dict()
 
-        for attr in attrs:
-            if type(attr) is not str:
+        if type(attr) is list:
+            for attr in attrs:
+                if type(attr) is not str:
+                    return class_d
+                
+                if attr in class_d:
+                    sel_d[attr] = class_d[attr]
                 return class_d
-            
-            if attr in class_d:
-                sel_d[attr] = class_d[attr]
-            return class_d
-        return sel_d
+            return sel_d
