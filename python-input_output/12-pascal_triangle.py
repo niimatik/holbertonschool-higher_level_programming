@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """
 pascal_triangle Module
 
@@ -16,7 +15,7 @@ def pascal_triangle(n):
     """
     Generate Pascal's Triangle up to the nth row.
 
-    Pascal's Triangle is a triangular array of the binomial coefficients. 
+    Pascal's Triangle is a triangular array of the binomial coefficients.
     Each number is the sum of the two numbers directly above it in the
     previous row.
 
@@ -24,7 +23,7 @@ def pascal_triangle(n):
         n (int): The number of rows to generate in the triangle.
 
     Returns:
-        list of list of int: A list of lists representing Pascal's Triangle. 
+        list of list of int: A list of lists representing Pascal's Triangle.
         Each inner list corresponds to a row in the triangle.
     """
     if n <= 0:
