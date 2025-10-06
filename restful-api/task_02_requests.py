@@ -43,7 +43,7 @@ def fetch_and_save_posts():
             csv_data.append(post_key)
             with open("posts.csv", "w", newline="") as f:
                 fieldname = ['id', 'title', 'body']
-                writer = csv.DictWriter(f, filesnames=fieldname)
+                writer = csv.DictWriter(f, fieldnames=fieldname)
                 writer.writeheader()
                 writer.writerows(csv_data)
         return csv_data
