@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """
-This script fetches posts from a public API (https://jsonplaceholder.typicode.com/posts)
+This script fetches posts from a public API: jsonplaceholder
 and either prints their titles to the console or saves them to a CSV file.
 
 Functions:
     fetch_and_print_posts() -- Fetches posts and prints their titles to stdout.
-    fetch_and_save_posts()  -- Fetches posts and saves selected fields (id, title, body) to a CSV file.
+    fetch_and_save_posts()  -- Fetches posts and saves selected fields
 """
 
 
 import requests
 import csv
+
 
 def fetch_and_print_posts():
     """
@@ -22,6 +23,8 @@ def fetch_and_print_posts():
         posts = response.json()
         for post in posts:
             print(post["title"])
+
+
 def fetch_and_save_posts():
     """
     Fetches posts from the API and writes selected fields (id, title, body)
