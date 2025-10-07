@@ -29,8 +29,10 @@ class first_server(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json_string.encode("utf-8"))
         elif self.path == "/info":
-            infos = {"version": "1.0",
-                     "description": "A simple API built with http.server"}
+            infos = {
+                "version": "1.0",
+                "description": "A simple API built with http.server"
+            }
             json_string = json.dumps(infos)
             self.send_response(200)
             self.send_header("content-type", "application/json")
