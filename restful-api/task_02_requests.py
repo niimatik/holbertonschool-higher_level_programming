@@ -18,7 +18,7 @@ def fetch_and_print_posts():
     Fetches posts from the API and prints each post's title.
     """
     response = requests.get('https://jsonplaceholder.typicode.com/posts')
-    print("Status Code: ".format(), response.status_code)
+    print("Status Code:".format(), response.status_code)
     if response.status_code == 200:
         posts = response.json()
         for post in posts:
