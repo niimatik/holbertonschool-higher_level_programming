@@ -91,5 +91,5 @@ if __name__ == "__main__":
     listens indefinitely for incoming requests.
     """
     with socketserver.TCPServer(("", PORT), FirstServer) as httpd:
-        print("Serving at port", PORT)
+        print(f"Serving on port {PORT}")
         httpd.serve_forever()
