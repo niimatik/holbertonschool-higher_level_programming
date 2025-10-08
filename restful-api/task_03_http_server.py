@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Simple HTTP API Server using Python's built-in http.server module.
 
