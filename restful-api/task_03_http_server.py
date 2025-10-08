@@ -9,7 +9,7 @@ PORT = 8000
 
 
 class FirstServer(http.server.BaseHTTPRequestHandler):
-"""Class that deal with the requests of the users"""
+    """Class that deal with the requests of the users"""
     def do_GET(self):
         """All the methods to deal with some endpoints"""
         if self.path == "/data":
