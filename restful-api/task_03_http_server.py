@@ -51,35 +51,36 @@ class FirstServer(http.server.BaseHTTPRequestHandler):
             datas = {"name": "John", "age": 30, "city": "New York"}
             json_string = json.dumps(datas)
             self.send_response(200)
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json_string.encode("utf-8"))
+
+        elif self.path == "/info":
+            infos = {
+                "version": "1.0",
+                "description": "A simple API built with http.server"
+            }
+            json_string = json.dumps(infos)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json_string.encode("utf-8"))
 
         elif self.path == "/status":
             self.send_response(200)
-            self.send_header("content-type", "text/plain")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write("OK".encode("utf-8"))
-
-        elif self.path == "/info":
-            infos_data = {
-                "version": "1.0", "description":
-                "A simple API built with http.server"}
-            infos_json_string = json.dumps(infos_data)
-            self.send_response(200)
-            self.send_header("content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(infos_json_string.encode("utf-8"))
+            self.wfile.write("ok".encode("utf-8"))
 
         elif self.path == "/":
             self.send_response(200)
-            self.send_header("Content-type", "text/plain")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write("Hello, this is a simple API!".encode("utf-8"))
 
         else:
             self.send_response(404)
-            self.send_header("Content-type", "text/plain")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write("Endpoint not found".encode("utf-8"))
 
