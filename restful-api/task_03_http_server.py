@@ -1,27 +1,6 @@
 #!/usr/bin/python3
-"""
-Simple HTTP API Server using Python's built-in http.server module.
-
-This module defines and runs a basic HTTP server that listens on port 8000.
-It handles GET requests and provides responses for the following endpoints:
-
-Endpoints:
-- `/data`   : Returns a JSON object with sample user data.
-- `/info`   : Returns a JSON object with version and description info.
-- `/status` : Returns plain text 'ok' to indicate server is alive.
-- `/`       : Returns a welcome message in plain text.
-- any other : Returns a 404 error with 'Endpoint not found'.
-
-Usage:
-    Run this script directly with Python 3 to start the server:
-        $ python3 server.py
-
-The server runs in the foreground and logs a message indicating the port
-it's listening on.
-
-Author: [Your Name or Initials]
-Date: [Optional Date]
-"""
+"""Module that add a class who deal with the requests of web site, and a script
+that start a local http server"""
 import http.server
 import socketserver
 import json
@@ -30,21 +9,9 @@ PORT = 8000
 
 
 class FirstServer(http.server.BaseHTTPRequestHandler):
-    """
-    A simple HTTP server handler that responds to specific GET requests.
-
-    Endpoints:
-    - /data: Returns JSON data with a sample user info.
-    - /info: Returns JSON data with version and description info.
-    - /status: Returns plain text 'ok' indicating the server is running.
-    - /: Returns a welcome message as plain text.
-    Other paths return a 404 error with 'Endpoint not found'.
-    """
+"""Class that deal with the requests of the users"""
     def do_GET(self):
-        """
-        Handle GET requests by returning appropriate content
-        based on the path.
-        """
+        """All the methods to deal with some endpoints"""
         if self.path == "/data":
             datas = {"name": "John", "age": 30, "city": "New York"}
             json_string = json.dumps(datas)
