@@ -50,8 +50,9 @@ class first_server(http.server.BaseHTTPRequestHandler):
             self.wfile.write("Hello, this is a simple API!".encode("utf-8"))
         else:
             self.send_response(404)
-            self.end_headers
-            self.wfile.write("Endpoint not found")
+            self.send_header("content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write("Endpoint not found".encode("utf-8"))
 
 
 if __name__ == "__main__":
