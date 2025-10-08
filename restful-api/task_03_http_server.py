@@ -1,4 +1,28 @@
 #!/usr/bin/python3
+
+"""
+Simple HTTP API Server using Python's built-in http.server module.
+
+This module defines and runs a basic HTTP server that listens on port 8000.
+It handles GET requests and provides responses for the following endpoints:
+
+Endpoints:
+- `/data`   : Returns a JSON object with sample user data.
+- `/info`   : Returns a JSON object with version and description info.
+- `/status` : Returns plain text 'ok' to indicate server is alive.
+- `/`       : Returns a welcome message in plain text.
+- any other : Returns a 404 error with 'Endpoint not found'.
+
+Usage:
+    Run this script directly with Python 3 to start the server:
+        $ python3 server.py
+
+The server runs in the foreground and logs a message indicating the port
+it's listening on.
+
+Author: [Your Name or Initials]
+Date: [Optional Date]
+"""
 import http.server
 import socketserver
 import json
