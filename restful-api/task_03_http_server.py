@@ -22,7 +22,6 @@ it's listening on.
 Author: [Your Name or Initials]
 Date: [Optional Date]
 """
-
 import http.server
 import socketserver
 import json
