@@ -40,7 +40,6 @@ class FirstServer(http.server.BaseHTTPRequestHandler):
     - /: Returns a welcome message as plain text.
     Other paths return a 404 error with 'Endpoint not found'.
     """
-
     def do_GET(self):
         """
         Handle GET requests by returning appropriate content
