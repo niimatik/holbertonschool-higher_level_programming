@@ -35,7 +35,7 @@ class FirstServer(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write("ok".encode("utf-8"))
+            self.wfile.write("OK".encode("utf-8"))
 
         elif self.path == "/":
             self.send_response(200)
