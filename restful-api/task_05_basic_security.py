@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """Flask API for Demonstrating Basic and Token-Based Authentication."""
 
-from flask import jsonify, request
+from flask import Flask, jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity
 )
+
+app = Flask(__name__)
 
 users = {
     "user1": {"username": "user1",
