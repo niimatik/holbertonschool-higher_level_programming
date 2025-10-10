@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""
-Flask API for Demonstrating Basic and Token-Based Authentication
-"""
+"""Flask API for Demonstrating Basic and Token-Based Authentication."""
 
-from flask import Flask, jsonify, request
+from flask import jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import (
@@ -19,12 +17,6 @@ users = {
 }
 
 auth = HTTPBasicAuth()
-
-
-@app.route("/basic-protected")
-@auth.login_required
-def basic_protected():
-    return jsonify({"message": "Basic Auth: Access Granted"})
 
 
 @auth.verify_password
