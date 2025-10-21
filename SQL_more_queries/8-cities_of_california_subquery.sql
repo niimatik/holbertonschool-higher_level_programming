@@ -5,5 +5,5 @@ WHERE state_id = (
         SELECT id
         FROM states
         WHERE
-            name = 'California'
-    );
+        name = 'California'
+    ) ORDER BY ASC;
