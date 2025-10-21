@@ -5,4 +5,4 @@ WHERE {
 	SELECT id
 	FROM states
 	WHERE name = 'California'
-} ASC;
+};
