@@ -2,5 +2,7 @@
 SELECT name, id
 FROM states
 WHERE {
-	name = 'California'
+	SELECT id
+	FROM cities
+	WHERE name = 'California'
 } ASC;
