@@ -1,8 +1,7 @@
 #!/user/bin/python3
 """
-3-my_safe_filter_states.py is a script that takes in arguments and
-displays all values in the states table of hbtn_0e_0_usa
-where name matches the argument.
+A script that takes in arguments and displays all values in
+the states table of hbtn_0e_0_usa where name matches the argument.
 """
 
 import MySQLdb
