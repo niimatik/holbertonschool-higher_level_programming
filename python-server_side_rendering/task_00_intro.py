@@ -3,8 +3,10 @@
 def generate_invitations(template, attendees):
     invalide_template = not isinstance(template, str)
     invalide_list = not isinstance(attendees, list)
+    invalide_element = not all(isinstance(attendee, dict)
+                               for attendee in attendees)
 
-    if invalide_list or invalide_template:
+    if invalide_list or invalide_template or invalide_element:
         print("invalide type")
         return
 
