@@ -26,7 +26,7 @@ def items():
     with open('item.json', 'r') as file:
         data = json.load(file)
         items = data.get("items", [])
-    return render_template('items.html', items = items)
+    return render_template('items.html', items)
 
 
 if __name__ == '__main__':
